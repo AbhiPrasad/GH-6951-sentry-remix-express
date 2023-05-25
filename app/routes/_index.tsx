@@ -13,12 +13,7 @@ export const loader = async () => {
 };
 
 export const action: ActionFunction = async ({ request }) => {
-  try {
-    throw new Error("Sentry Error");
-  } catch (err) {
-    console.log(err);
-    Sentry.captureException(err);
-  }
+  throw new Error("Sentry Error");
 };
 
 export default function Index() {
